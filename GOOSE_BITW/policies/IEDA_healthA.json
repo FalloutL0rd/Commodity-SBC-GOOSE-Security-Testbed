@@ -1,0 +1,21 @@
+{
+  "mode": "monitor",
+  "stripTag": false,
+  "timeAllowedToLive_ms": 2000,
+  "window": { "maxSqGap": 8, "maxAge_ms": 5000 },
+
+  "devices": [{
+    "deviceId": "IEDA",
+    "k_device_hex": "b29a1e653ce6387f189387867cf43201f78032e60ae1d75e00587f8534b74317",
+    "kdfInfoFmt": "GOOSE|{goID}|{gocbRef}|{appId}",
+    "streams": [{
+      "name": "healthA",
+      "allowUnsigned": true,
+      "match": {
+        "appId": 1000,
+        "goID":   "IEDA/LLN0$GO$healthA",
+        "gocbRef":"IEDA/LLN0$GO$healthA"
+      }
+    }]
+  }]
+}

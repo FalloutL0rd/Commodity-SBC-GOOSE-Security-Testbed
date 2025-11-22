@@ -1,0 +1,23 @@
+{
+  "appId": 1000,
+
+  "gocbRef": "IEDA/LLN0$GO$healthA",
+  "datSet": "IEDA/LLN0$AnalogValues",
+  "goID": "IEDA/LLN0$GO$healthA",
+
+  "dstMac": "01:0c:cd:01:00:01",
+  "vlanId": 0,
+  "vlanPriority": 0,
+
+  "timeAllowedToLive": 2000,
+  "confRev": 1,
+  "ndsCom": false,
+  "test": false,
+
+  "heartbeat_ms": 1000,
+
+  "dataset": [
+    { "name": "deviceUp", "type": "boolean", "value": true, "quality": "good" },
+    { "name": "temp",     "type": "integer", "value": 25,   "quality": "good" }
+  ]
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "pid":31095,
+    "name":"healthA",
+    "appId":1000,
+    "iface":"enp1s0",
+    "config":"publications\/healthA.json",
+    "started_at":1763833209
+  }
+]

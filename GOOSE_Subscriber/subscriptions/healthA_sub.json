@@ -1,0 +1,9 @@
+{
+  "name": "healthA_sub",
+  "appId": 1000,
+  "gocbRef": "IEDA/LLN0$GO$healthA",
+  "dstMac": "01:0c:cd:01:00:01",
+
+  "data_values_count": 2,
+  "trip_logic": "trip_logic/healthA_trip.json"
+}

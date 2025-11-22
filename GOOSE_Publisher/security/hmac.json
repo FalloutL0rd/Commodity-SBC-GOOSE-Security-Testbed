@@ -1,0 +1,9 @@
+{
+  "enabled": false,
+  "mode": "hmac-sha256-16",
+  "key_device_hex": "b29a1e653ce6387f189387867cf43201f78032e60ae1d75e00587f8534b74317",
+  "kdf": { "algo": "HKDF-SHA256", "infoFmt": "GOOSE|{goID}|{gocbRef}|{appId}" },
+  "coverage": ["gocbRef","goID","appId","stNum","sqNum","dataset"],
+  "tagPlacement": "dataset:last",
+  "truncate_bytes": 16
+}

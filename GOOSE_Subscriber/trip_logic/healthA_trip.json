@@ -1,0 +1,40 @@
+{
+  "name": "healthA_trip",
+  "description": "Health testing logic. Trip when health boolean goes false and latched until manager reset.",
+
+  "logic": "all",
+  "latch": true,
+  "manual_reset_required": true,
+
+  "require_stnum_change": true,
+  "require_burst": true,
+  "burst_window_ms": 60,
+  "burst_min_frames": 3,
+  "burst_interval_max_ms": 10,
+
+  "reset_on_stnum_change": false,
+  "baseline_relearn_ms": 3000,
+
+  "rules": [
+    { "index": 0, "type": "bool", "equals": false, "label": "HealthStatus" }
+  ],
+
+  "offline_policy": {
+    "timeout_ms": 2000,
+    "mark_offline_on_invalid_goose": true
+  },
+
+  "reset_policy": {
+    "type": "manual_only",
+    "normal_required": true,
+    "normal_rules": [
+      { "index": 0, "type": "bool", "equals": true }
+    ],
+    "min_sq_in_state": 3,
+    "normal_dwell_ms": 2000,
+    "no_burst_ms": 500
+  },
+
+  "pin_source": false,
+  "source_cooldown_ms": 6000
+}
