@@ -12,8 +12,6 @@ Covered files:
 
 The various registry.json files are runtime registries maintained by the manager programs and are not documented here.
 
----
-
 ## 1. Publisher GOOSE publication config (healthA.json)
 
 Path:
@@ -104,8 +102,6 @@ Creating your own publication JSON:
 6. Define the dataset array, using boolean and integer types as needed.
 7. Add the new file to the publisher registry so the manager CLI can present it.
 
----
-
 ## 2. Subscriber GOOSE subscription config (healthA_sub.json)
 
 Path:
@@ -155,8 +151,6 @@ Creating your own subscription JSON:
 3. Set dstMac to the same multicast MAC as the publisher.
 4. Set data_values_count to the length of the publisher dataset.
 5. Set trip_logic to a new trip logic file you create for this stream.
-
----
 
 ## 3. Subscriber trip logic config (healthA_trip.json)
 
@@ -319,8 +313,6 @@ Creating your own trip logic JSON:
 5. Optionally set offline_policy and reset_policy to describe normal and offline behavior.
 6. Reference this file in the subscriber subscription JSON.
 
----
-
 ## 4. BITW policy config (IEDA_healthA.json)
 
 Path:
@@ -416,8 +408,6 @@ Creating your own BITW policy JSON:
    - Add stream entries that match new publications by appId, goID, and gocbRef.
    - Decide whether each stream allows unsigned frames.
 
----
-
 ## 5. Publisher HMAC config (hmac.json)
 
 Path:
@@ -479,8 +469,6 @@ Creating your own HMAC config:
 4. Keep kdf.infoFmt in sync with the BITW kdfInfoFmt format.
 5. Leave coverage and tagPlacement unchanged unless you also change the BITW implementation.
 6. Choose truncate_bytes (16 is a common choice).
-
----
 
 ## 6. Summary
 
