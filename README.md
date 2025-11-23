@@ -261,8 +261,8 @@ Example commands:
 # Trigger a short trip sequence
 sudo python3 goose_trip.py -i enp0s3 -t
 
-# Send a sustained swarm for 30 seconds
-sudo python3 goose_swarm.py -i enp0s3 -r 100 -d 30
+# Send an infinite topspeed flood (requires tcpreplay):
+sudo python3 goose_swarm.py -i eth0 --fast
 
 # Sniff GOOSE traffic for 30 seconds and write to a pcap file
 sudo python3 goose_sniff.py -i enp0s3 -s 30 -w goose_attack.pcap
