@@ -220,6 +220,30 @@ mode (drop frames that fail HMAC or freshness checks).
 
 ### 3. Run GOOSE loggers
 
+Ensure first that PTP is running on the Publisher and Subscriber so their clocks stay aligned.
+
+On the Publisher LattePanda (wired interface `enp1s0`):
+
+```bash
+# Terminal 1: discipline the PTP hardware clock over GOOSE LAN
+sudo ptp4l -i enp1s0 -2 -m
+
+# Terminal 2: sync system clock from the PTP hardware clock
+sudo phc2sys -s CLOCK_REALTIME -c /dev/ptp0 -w -m
+```
+
+On the Subscriber LattePanda:
+
+```bash
+# Terminal 1: discipline the PTP hardware clock over GOOSE LAN
+sudo ptp4l -i enp1s0 -2 -m
+
+# Terminal 2: sync system clock from the PTP hardware clock
+sudo phc2sys -s /dev/ptp0 -c CLOCK_REALTIME -w -m
+```
+
+If it goes well, they should sync and you can then run the loggers.
+
 On the Publisher LattePanda:
 
 ```bash
